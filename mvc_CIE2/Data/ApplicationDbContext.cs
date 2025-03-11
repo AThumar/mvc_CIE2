@@ -18,6 +18,6 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<OrderDetail> OrderDetails { get; set; }
 
     public DbSet<OrderStatus> orderStatuses { get; set; }
-    public DbSet<Stock> Stocks { get; set; }
+  // public DbSet<Stock> Stocks { get; set; }
 
 }
