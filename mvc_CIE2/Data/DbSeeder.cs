@@ -1,10 +1,12 @@
-﻿using BookShoppingCartMvcUI.Constants;
+﻿using mvc_CIE2.Constants;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using mvc_CIE2.Data;
 using mvc_CIE2.Models;
+using mvc_CIE2.Areas.Identity.Pages.Account;
 
-namespace BookShoppingCartMvcUI.Data;
+
+namespace mvc_CIE2.Data;
 
 public class DbSeeder
 {
