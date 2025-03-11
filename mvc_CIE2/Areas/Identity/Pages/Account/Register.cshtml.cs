@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using BookShoppingCartMvcUI.Constants;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -19,7 +20,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
-namespace mvc_CIE2.Areas.Identity.Pages.Account
+namespace BookShoppingCartMvcUI.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
@@ -120,6 +121,8 @@ namespace mvc_CIE2.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    // assing role to user
+                    await _userManager.AddToRoleAsync(user, Roles.User.ToString());
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
