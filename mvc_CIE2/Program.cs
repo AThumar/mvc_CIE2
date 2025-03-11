@@ -17,7 +17,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
-    await DbSeeder.SeedDefaultData(scope.ServiceProvider);
+    await BookShoppingCartMvcUI.Data.DbSeeder.SeedDefaultData(scope.ServiceProvider);
 }
 
 
